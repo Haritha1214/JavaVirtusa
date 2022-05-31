@@ -1,0 +1,93 @@
+//Reverse String by Word
+
+
+
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner s= new Scanner(System.in);
+        String t= s.nextLine();
+        String[] r=t.split(" ");
+       for(int i=r.length-1;i>=0;i--){
+           System.out.print(r[i]+" ");
+       }
+    }
+} 
+
+
+Return last digit after returning the power
+
+
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner s= new Scanner(System.in);
+        int n1=s.nextInt();
+        int n2=s.nextInt();
+        int n3=(int)Math.pow(n1,n2);
+        System.out.println(n3%10);
+    }
+}
+
+Without duplicate String
+Ex:
+Java  OP=jav
+
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner s = new Scanner(System.in);
+        String s1 = s.nextLine();
+        String ans="";
+        int l = s1.length();
+        for(int i=0;i<l;i++){
+           String c = Character.toString(s1.charAt(i));
+            if (!ans.contains(c))
+                ans+=c;
+        }
+        System.out.println(ans);
+    }
+}
+
+Reversing Array Without knowing size
+
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner s = new Scanner(System.in);
+        ArrayList<Integer> a = new ArrayList<>();
+        while(s.hasNextInt()){
+            a.add(s.nextInt());
+        }
+        int n= a.get(a.size()-1);
+        int[] ans=new int[n];
+        int j=0;
+        for( int i = n-1;i>=0;i--){
+            ans[j++]=a.get(i);
+            
+        }
+        System.out.print(Arrays.toString(ans));
+    }
+}
+
+Push Zeros To End
+
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner s= new Scanner(System.in);
+        ArrayList<Integer> a=new ArrayList<>();
+        while(s.hasNext()){
+            a.add(s.nextInt());
+        }
+        int n=a.get(a.size()-1);
+        int[] ans=new int[n];
+        int j=0;
+        for(int i =0;i<n;i++){
+            if(a.get(i)!=0){
+                ans[j++]=a.get(i);
+            }
+        }
+        System.out.println(Arrays.toString(ans));
+    }
+}
