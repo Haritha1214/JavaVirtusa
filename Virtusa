@@ -91,3 +91,51 @@ class Main{
         System.out.println(Arrays.toString(ans));
     }
 }
+
+
+//Palindrome
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner s = new Scanner(System.in);
+        String st = s.nextLine();
+        String rv="";
+        for(int i=st.length()-1;i>=0;i--){
+            rv+=st.charAt(i);
+            
+        }
+        if(rv.equals(st)){
+            System.out.println(1);
+        }
+        else{
+            System.out.println(0);
+        }
+    }
+}
+
+//Sum of largest and smallest element in an array
+
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        int[] arr = new int[n];
+        int small=9;
+        int large=0;
+        for(int i=0;i<n;i++){
+            arr[i]=s.nextInt();
+            if(arr[i]<small){
+                small=arr[i];
+            }
+            else if(arr[i]>large){
+                large=arr[i];
+            }
+        }
+        System.out.print(small+large);
+        
+       
+    }
+}
