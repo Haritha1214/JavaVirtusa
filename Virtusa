@@ -139,3 +139,77 @@ public class Main{
        
     }
 }
+
+
+
+
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner s = new Scanner(System.in);
+        ArrayList<Integer> a = new ArrayList<>();
+        while(s.hasNextInt()){
+            a.add(s.nextInt());
+        }
+        ArrayList<Integer>  even = new ArrayList<>();
+        for(int ele:a){
+            if(ele%2==0)
+                even.add(ele);
+        }
+        if(even.size()%2==0)
+            System.out.print(even.size());
+        else
+            System.out.print(-1);
+    }
+}
+
+
+
+
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner s = new Scanner(System.in);
+        int n=s.nextInt();
+        int[] a1=new int[n];
+        int[] a2=new int[n];
+        for(int i =0;i<n;i++){
+            a1[i]=s.nextInt();
+        }
+        for(int i=0;i<n;i++){
+            a2[i]=s.nextInt();
+        }
+        int count=0;
+        for(int i=0;i<n;i++){
+            if(a1[i]>a2[i])
+                count+=1;
+        }
+        System.out.print(count);
+    }
+}
+
+
+// You are using Java
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner s= new Scanner(System.in);
+        String st=s.nextLine();
+        st=st.replace(" ","") ;
+        int[] arr=new int[26];
+        for(int i=0;i<st.length();i++){
+            arr[st.charAt(i)-'a']++;
+        }
+        int max=0;
+        int l=0;
+        for(int i=0;i<26;i++){
+            if(max<arr[i]){
+                max=arr[i];
+                l=i;
+            }
+        }
+        System.out.println((char)(l+97));
+    }
+}
